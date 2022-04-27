@@ -20,8 +20,8 @@ width = 0.2
 y1 = [theory_pr[i-1] for i in x] 
 x2 = [(i+width) for i in x ]
 y2 = [exp_pr[i-1] for i in x] 
-plt.bar(x, y1 ,color = 'b',width = width , edgecolor = 'black' , label = 'Theoretical')
-plt.bar(x2, y2 , color = 'g' , width = width , edgecolor = 'black' , label = 'Experimental')
+plt.stem(x, y1 ,linefmt='black' ,markerfmt = 'D',label = 'Theoretical')
+plt.stem(x2, y2 ,linefmt= 'grey' , label = 'Experimental')
 plt.xlabel('Outcomes')
 plt.ylabel('Probability')
 x3 = [i+width/2 for i in x]
