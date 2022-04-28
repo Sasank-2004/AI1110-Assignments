@@ -2,12 +2,13 @@ import numpy as np
 import pandas as pd
 from numpy import random as RN
 from matplotlib import pyplot as plt
+from pconst import const 
 read = pd.read_excel("input.xlsx","Sheet1")
 data = np.array(read)
 x = [1,2,3,4,5,6] 
-frequency = {data[0][1]:data[1][1],data[0][2]:data[1][2],data[0][3]:data[1][3],data[0][4]:data[1][4],data[0][5]:data[1][5],data[0][6]:data[1][6]}
+frequency = const.ConstDict({data[0][1]:data[1][1],data[0][2]:data[1][2],data[0][3]:data[1][3],data[0][4]:data[1][4],data[0][5]:data[1][5],data[0][6]:data[1][6]})
 N = frequency[1]+frequency[2]+frequency[3]+frequency[4]+frequency[5]+frequency[6]
-theory_pr = [frequency[1]/N,frequency[2]/N,frequency[3]/N,frequency[4]/N,frequency[5]/N,frequency[6]/N]
+theory_pr = const.ConstList([frequency[1]/N,frequency[2]/N,frequency[3]/N,frequency[4]/N,frequency[5]/N,frequency[6]/N])
 print("Theoretical Probabilities : ")
 print(f' P(1) = {theory_pr[0]}')
 print(f' P(2) = {theory_pr[1]}')
