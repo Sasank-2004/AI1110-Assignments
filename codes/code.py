@@ -37,3 +37,5 @@ x3 = [1+width/2,2+width/2,3+width/2,4+width/2,5+width/2,6+width/2,]
 plt.xticks(x3,x)
 plt.legend(loc = 9)
 plt.show()
+p = 1/6
+print(f'For a far die probability of each number : {p}')
